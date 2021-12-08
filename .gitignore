@@ -1,4 +1,6 @@
 
 FinalProject/.vs/FinalProject/v16/.suo
 FinalProject/.vs/FinalProject/v16/Browse.VC.db
-FinalProject/.vs/FinalProject/v16/.suo
+*.opendb
+*.db-wal
+/FinalProject/.vs/FinalProject/v16/Browse.VC.db-shm
