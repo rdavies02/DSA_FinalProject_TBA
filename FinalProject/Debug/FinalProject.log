@@ -1,5 +1,44 @@
-﻿  Game.cpp
+﻿  Queue.cpp
+C:\Users\rfdav\OneDrive - onu.edu\GitHub\DSA_FinalProject_TBA\FinalProject\FinalProject\Queue.cpp(29,10): fatal error C1083: Cannot open include file: 'Qeueue.h': No such file or directory
+  Game.cpp
+C:\Users\rfdav\OneDrive\Documents\GitHub\DSA_FinalProject_TBA\FinalProject\Player.h(15,14): error C2653: 'Game': is not a class or namespace name
+C:\Users\rfdav\OneDrive\Documents\GitHub\DSA_FinalProject_TBA\FinalProject\Player.h(15,20): error C2065: 'item': undeclared identifier
+C:\Users\rfdav\OneDrive\Documents\GitHub\DSA_FinalProject_TBA\FinalProject\Player.h(15,7): error C2923: 'std::vector': 'item' is not a valid template type argument for parameter '_Ty'
+C:\Users\rfdav\OneDrive\Documents\GitHub\DSA_FinalProject_TBA\FinalProject\Player.h(15): message : see declaration of 'item'
+C:\Users\rfdav\OneDrive\Documents\GitHub\DSA_FinalProject_TBA\FinalProject\Player.h(15,7): error C2976: 'std::vector': too few template arguments
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector(443): message : see declaration of 'std::vector'
+C:\Users\rfdav\OneDrive\Documents\GitHub\DSA_FinalProject_TBA\FinalProject\Game.h(15,25): error C2504: 'Map': base class undefined
+  LinkedListStack.cpp
+C:\Users\rfdav\OneDrive\Documents\GitHub\DSA_FinalProject_TBA\FinalProject\LinkedListStack.cpp(39,6): error C2065: 'c': undeclared identifier
+C:\Users\rfdav\OneDrive\Documents\GitHub\DSA_FinalProject_TBA\FinalProject\LinkedListStack.cpp(39,6): error C3861: 'c': identifier not found
+C:\Users\rfdav\OneDrive\Documents\GitHub\DSA_FinalProject_TBA\FinalProject\LinkedListStack.cpp(145,9): error C2760: syntax error: unexpected token '=', expected 'expression'
+C:\Users\rfdav\OneDrive\Documents\GitHub\DSA_FinalProject_TBA\FinalProject\LinkedListStack.cpp(150,9): error C2760: syntax error: unexpected token '=', expected 'expression'
   main.cpp
+C:\Users\rfdav\OneDrive\Documents\GitHub\DSA_FinalProject_TBA\FinalProject\Game.h(15,25): error C2504: 'Map': base class undefined
+C:\Users\rfdav\OneDrive\Documents\GitHub\DSA_FinalProject_TBA\FinalProject\Player.h(15,20): error C2039: 'item': is not a member of 'Game'
+C:\Users\rfdav\OneDrive\Documents\GitHub\DSA_FinalProject_TBA\FinalProject\Game.h(15): message : see declaration of 'Game'
+C:\Users\rfdav\OneDrive\Documents\GitHub\DSA_FinalProject_TBA\FinalProject\Player.h(15,24): error C2065: 'item': undeclared identifier
+C:\Users\rfdav\OneDrive\Documents\GitHub\DSA_FinalProject_TBA\FinalProject\Player.h(15,7): error C2923: 'std::vector': 'item' is not a valid template type argument for parameter '_Ty'
+C:\Users\rfdav\OneDrive\Documents\GitHub\DSA_FinalProject_TBA\FinalProject\Player.h(15): message : see declaration of 'item'
+C:\Users\rfdav\OneDrive\Documents\GitHub\DSA_FinalProject_TBA\FinalProject\Player.h(15,7): error C2976: 'std::vector': too few template arguments
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector(443): message : see declaration of 'std::vector'
   Player.cpp
+C:\Users\rfdav\OneDrive\Documents\GitHub\DSA_FinalProject_TBA\FinalProject\Game.h(15,25): error C2504: 'Map': base class undefined
+C:\Users\rfdav\OneDrive\Documents\GitHub\DSA_FinalProject_TBA\FinalProject\Player.h(15,20): error C2039: 'item': is not a member of 'Game'
+C:\Users\rfdav\OneDrive\Documents\GitHub\DSA_FinalProject_TBA\FinalProject\Game.h(15): message : see declaration of 'Game'
+C:\Users\rfdav\OneDrive\Documents\GitHub\DSA_FinalProject_TBA\FinalProject\Player.h(15,24): error C2065: 'item': undeclared identifier
+C:\Users\rfdav\OneDrive\Documents\GitHub\DSA_FinalProject_TBA\FinalProject\Player.h(15,7): error C2923: 'std::vector': 'item' is not a valid template type argument for parameter '_Ty'
+C:\Users\rfdav\OneDrive\Documents\GitHub\DSA_FinalProject_TBA\FinalProject\Player.h(15): message : see declaration of 'item'
+C:\Users\rfdav\OneDrive\Documents\GitHub\DSA_FinalProject_TBA\FinalProject\Player.h(15,7): error C2976: 'std::vector': too few template arguments
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector(443): message : see declaration of 'std::vector'
+C:\Users\rfdav\OneDrive\Documents\GitHub\DSA_FinalProject_TBA\FinalProject\Player.cpp(6,18): error C2512: 'std::vector': no appropriate default constructor available
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector(443,1): message : see declaration of 'std::vector'
+  Map.cpp
+C:\Users\rfdav\OneDrive\Documents\GitHub\DSA_FinalProject_TBA\FinalProject\Player.h(15,14): error C2653: 'Game': is not a class or namespace name
+C:\Users\rfdav\OneDrive\Documents\GitHub\DSA_FinalProject_TBA\FinalProject\Player.h(15,20): error C2065: 'item': undeclared identifier
+C:\Users\rfdav\OneDrive\Documents\GitHub\DSA_FinalProject_TBA\FinalProject\Player.h(15,7): error C2923: 'std::vector': 'item' is not a valid template type argument for parameter '_Ty'
+C:\Users\rfdav\OneDrive\Documents\GitHub\DSA_FinalProject_TBA\FinalProject\Player.h(15): message : see declaration of 'item'
+C:\Users\rfdav\OneDrive\Documents\GitHub\DSA_FinalProject_TBA\FinalProject\Player.h(15,7): error C2976: 'std::vector': too few template arguments
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector(443): message : see declaration of 'std::vector'
+C:\Users\rfdav\OneDrive\Documents\GitHub\DSA_FinalProject_TBA\FinalProject\Game.h(15,25): error C2504: 'Map': base class undefined
   Generating Code...
-  FinalProject.vcxproj -> C:\Users\rfdav\OneDrive\Documents\GitHub\DSA_FinalProject_TBA\FinalProject\Debug\FinalProject.exe

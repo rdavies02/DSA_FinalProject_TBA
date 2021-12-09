@@ -30,6 +30,9 @@
     <ClCompile Include="LinkedListStack.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\..\..\..\OneDrive - onu.edu\GitHub\DSA_FinalProject_TBA\FinalProject\FinalProject\QueueList.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Player.h">
@@ -42,6 +45,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="LinkedListStack.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="QueueList.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

@@ -25,10 +25,23 @@ using namespace std;
 		Node is a user defined data type defined inside the class.
 */
 
-// initialize head and tail pointers to NULL
+/* 
+	~Node: Destructor definition for Node 
+*/
+template<class Type>
+inline LinkedListStack<Type>::Node::~Node() {
+	delete data;
+	delete next;
+}
+
 template<typename Type>
-LinkedListStack<Type>::LinkedListStack() {
-	listSize = 0;
+LinkedListStack<Type>::LinkedListStack(int cap) {
+	if (c < 1) {
+		throw "Invalid Stack size";
+	}
+
+	// initialize head and tail pointers to NULL
+	capacity = cap;
 	head = nullptr;
 	tail = nullptr;
 }
@@ -37,14 +50,13 @@ LinkedListStack<Type>::LinkedListStack() {
 // "~" : Resolution Operator
 template<class Type>
 LinkedListStack<Type>::~LinkedListStack() {
-	//cout << "destructor is executed ..." << endl;
-
-	Node* current = head;
+	/*Node* current = head;
 	while (current != nullptr) {
 		head = head->next;
 		delete current;
 		current = head;
-	}
+	}*/
+	delete head;
 
 	head = nullptr;
 	tail = nullptr;
@@ -61,7 +73,12 @@ LinkedListStack<Type>::~LinkedListStack() {
 	2. attach the new node to the list
 */
 template<class Type>
-void LinkedListStack<Type>::insertAtBeginning(Type addData) {
+bool LinkedListStack<Type>::push(Type addData) {
+	
+		
+	if (isFull() == true) {
+		return false;
+	}
 
 	// a new node and a pointer to the new node are created
 	Node* newNode = new Node;
@@ -83,9 +100,9 @@ void LinkedListStack<Type>::insertAtBeginning(Type addData) {
 	}
 
 	// update the list size
-	listSize++;
-
-} // end LinkedList::insertAtBeginning
+	size++;
+	return true;
+}
 
 /* To delete a node from the beginning of the list, we have three cases:
 	1. Empty list
@@ -95,13 +112,14 @@ void LinkedListStack<Type>::insertAtBeginning(Type addData) {
 	we need a temporary pointer to point at the first node.
 */
 template<class Type>
-void LinkedListStack<Type>::deleteFromBeginning() {
+Type LinkedListStack<Type>::pop() {
 
 	// case #1: empty list
-	if (head == nullptr)
-		cout << "Empty list" << endl;
+	if (head == nullptr || isEmpty())
+		throw "Empty list";
 	else {
 		Node* delPtr = head;
+		Type data = head->data;
 
 		// case #2: list has a single node
 		if (head == tail) {
@@ -117,97 +135,31 @@ void LinkedListStack<Type>::deleteFromBeginning() {
 		delete delPtr;
 
 		// update the list size
-		listSize--;
+		size--;
+		return data;
 	}
 } // end LinkedList::deleteFromBeginning()
 
-
-/* to delete a node at random location, we need two pointers: one pointer
-// to mark the node to be deleted, and one pointer to mark the node before
-// the node to be deleted. The two pointers will point at two consecutive nodes.
-
-// we need to consider the following cases:
-// 1. key is not found
-// 2. key is found in a single node linked list
-// 3. key is found at the beginning
-// 4. key is the last node.
-*/
 template<class Type>
-void LinkedListStack<Type>::deleteKey(Type delData) {
-
-	Node* temp;
-	Node* current;
-	current = head;
-	temp = head;
-	// find the key to be deleted
-	while (current != nullptr && current->data != delData) {
-		temp = current;
-		current = current->next;
-	}
-
-	// check if you reach the end of list without finding the key
-	if (current == nullptr) {
-		cout << "Key is not in the list" << endl;
-	}
-	// key is found
-	else {
-		// special case : list has a single node => update head & tail
-		if (head == tail) {
-			head = nullptr;
-			tail = nullptr;
-		}
-		else {
-			temp->next = current->next;
-
-			if (current == head) {	// first node to be deleted => update head
-				head = head->next;
-			}
-			if (current == tail) {	// last node to be deleted => update tail
-				tail = temp;
-			}
-		} // end else
-
-		delete current; // to free to memory used by the deleted node
-
-		// update the list size
-		listSize--;
-	}
+bool LinkedListStack<Type>::isEmpty() {
+	return = (size == 0) ? true : false;
 }
 
-// function to find if a given key is in the list
 template<class Type>
-bool LinkedListStack<Type>::findKey(Type key) {
-
-	// the key is not found if the list is Empty
-	if (head == nullptr) {
-		return false;
-	}
-
-	Node* current;
-	current = head;
-
-	// find the key by traversing the list
-	while (current != nullptr && current->data != key) {
-		current = current->next;
-	}
-	// check if you reach the end of list without finding the key
-	if (current == nullptr) { return false; }
-	// key is found
-	else { return true; }
-
+bool LinkedListStack<Type>::isFull() {
+	return = (size == capacity) ? true : false;
 }
 
 // return the nodes count
 template<class Type>
-int LinkedListStack<Type>::size() {
-	return listSize;
+int LinkedListStack<Type>::getSize() {
+	return size;
 }
 
 // create a temporary pointer and traverse the entire list
 // do not use head pointer.
 template<class Type>
 void LinkedListStack<Type>::displayList() {
-
 	Node* current = head;
 
 	while (current != nullptr) {
