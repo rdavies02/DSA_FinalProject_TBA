@@ -6,16 +6,15 @@
 
 using namespace std;
 
-// define Vertices for a triangle
-
-
 int main() {
 
 	Game game;
 
-	try {
-		
 
+
+
+
+	try {
 		throw "Window closed successfully";
 	}
 	catch (const char* c) {

@@ -4,18 +4,15 @@
 #include <vector>
 #include <string>
 
+#include "Game.h"
+
 class Player {
 private:
 	std::string username;
-	float p_loc_x;
-	float p_loc_y;
 	
-	struct item {
-		float id;
-		std::string name;
-	};
+	
 
-	std::vector<item> backpack;
+	std::vector<Game::item> backpack;
 
 	struct stats {
 		float strength,
@@ -25,6 +22,17 @@ private:
 
 public:
 	Player();
+
+	// character setup
+	bool setupCharacter(int& playerStrength, int& playerDexterity, int& playerIntelligence, std::string& userName);
+	void finalDisplay(int strength, int dexterity, int intelligence);
+	std::string displayStat(int strength, int dexterity, int intelligence);
+	void increase(int& remainingPoints, std::string userName, std::string upgrade, int& strength, int& dexterity, int& intelligence);
+	void red(int remainingPoints, int& strength, int& dexterity, int& intelligence, std::string userName);
+
+	//Backpack
+	void addItemToBackpack(struct item);
+	void emptyBackpack();
 };
 
 
