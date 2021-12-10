@@ -12,7 +12,7 @@ private:
 	
 	
 
-	std::vector<Game::item> backpack;
+	//std::vector<Game::item> backpack;
 
 	struct stats {
 		float strength,

@@ -1,21 +1,38 @@
 #include <iostream>
 #include <string>
 
-#include "Player.h"
-#include "Game.h"
+#include "QueueList.h"
+#include "Queuelist.cpp"
+//#include "QueueList.hpp"
+//#include "Player.h"
+//#include "Game.h"
 
 using namespace std;
 
 int main() {
 
-	Game game;
-
-
-
-
-
+	//Game game;
 	try {
-		throw "Window closed successfully";
+	QueueList<string> queue(5);
+
+		queue.enqueue("bannana");
+		queue.displayQueue();
+		queue.enqueue("apple");
+		queue.displayQueue();
+		queue.enqueue("pear");
+		queue.displayQueue();
+		queue.enqueue("grapes");
+		queue.displayQueue();
+		queue.enqueue("raspberry");
+		queue.displayQueue();
+		queue.enqueue("strawberry");
+		queue.displayQueue();
+		cout << "dequeue_back = " << queue.dequeue_back() << endl;
+		//cout << "dequeue = " << queue.dequeue() << endl;
+		
+		queue.displayQueue();
+
+		//throw "Window closed successfully";
 	}
 	catch (const char* c) {
 		cerr << c << endl;

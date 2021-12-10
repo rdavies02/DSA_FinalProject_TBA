@@ -27,10 +27,7 @@
     <ClCompile Include="Map.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="LinkedListStack.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\..\OneDrive - onu.edu\GitHub\DSA_FinalProject_TBA\FinalProject\FinalProject\QueueList.cpp">
+    <ClCompile Include="QueueList.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -42,9 +39,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Map.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="LinkedListStack.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="QueueList.h">

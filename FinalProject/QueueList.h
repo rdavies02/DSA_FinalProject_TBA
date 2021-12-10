@@ -1,9 +1,18 @@
-#pragma once
 #ifndef __QUEUE_LIST_CLASS_H__
 #define __QUEUE_LIST_CLASS_H__
 
 /**
-	QueueList: Implementation of a queue using a linked list
+QueueList: Implementation of a queue using a linked list
+Author: Rhys Davies (Modified: 12-9-2021)
+	Basic structure of a queue: elemnets are inserted at 
+	the back of the queue, follows a first in first out structure
+
+	This implementation utilizes a linked list to store elements
+	a benefit to using a linked list is more control over 
+	allocated memory and easier garbage collection over an array 
+	implementation. this implementation includes an dequeue_back 
+	function, this dequeues the element at the back of the queue
+	this is not really that helpful because it operates in O(n).
 */
 template<class Type>
 class QueueList {
@@ -27,6 +36,8 @@ public:
 	bool enqueue(const Type addData);
 	// remove from the queue
 	Type dequeue();
+	// remove from the back of the queue
+	Type dequeue_back();
 	// look at the front of the queue
 	Type peek();
 	// check if the queue is empty

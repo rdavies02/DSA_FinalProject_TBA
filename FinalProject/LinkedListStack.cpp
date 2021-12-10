@@ -14,8 +14,6 @@
 //		* display list contents
 
 #include <iostream>
-#include <string>
-
 #include "LinkedListStack.h" 
 
 using namespace std;
@@ -30,7 +28,6 @@ using namespace std;
 */
 template<class Type>
 inline LinkedListStack<Type>::Node::~Node() {
-	delete data;
 	delete next;
 }
 
@@ -113,7 +110,6 @@ bool LinkedListStack<Type>::push(Type addData) {
 */
 template<class Type>
 Type LinkedListStack<Type>::pop() {
-
 	// case #1: empty list
 	if (head == nullptr || isEmpty())
 		throw "Empty list";
