@@ -1,0 +1,16 @@
+0 Tattered_Space_Suit NULL 0
+1 Pointed_Stick Strength 1
+2 Serraded_Knife Dexterity 1
+3 Idiots_Guide_To_Life Intelligence 1
+4 Brass_Knuckles Strength 3
+5 Kerrigans_Bow Dexterity 2
+6 Dirty_Map Intelligence 3
+7 Myterious_Potion Intelligence 4
+8 Plasma_Rifle Dexterity 6
+9 Holy_Sword Strength 9
+10 Johnathons_Key NULL 0
+11 old_rope_and_boards NULL 0
+12 Signal_Flare NULL 0
+13 The_Cake NULL 0
+14
+15 

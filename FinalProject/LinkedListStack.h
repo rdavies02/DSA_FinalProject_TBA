@@ -1,6 +1,8 @@
 #ifndef __LINKED_LIST_STACK_CLASS__
 #define __LINKED_LIST_STACK_CLASS__
 
+using namespace std;
+
 template<class Type>
 class LinkedListStack {
 
@@ -33,6 +35,8 @@ public:
 	int getSize();
 	// function to display the contents of the list
 	void displayList();
+	// converts the contents of the stack to a string
+	string to_String();
 
 }; // class LinkedList
 

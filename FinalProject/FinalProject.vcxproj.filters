@@ -30,6 +30,9 @@
     <ClCompile Include="QueueList.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="LinkedListStack.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Player.h">
@@ -44,5 +47,21 @@
     <ClInclude Include="QueueList.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="LinkedListStack.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="itemlist.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="locations.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="map_file.csv">
+      <Filter>Resource Files</Filter>
+    </None>
   </ItemGroup>
 </Project>

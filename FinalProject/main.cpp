@@ -3,36 +3,48 @@
 
 #include "QueueList.h"
 #include "Queuelist.cpp"
+#include "Map.h"
+
 //#include "QueueList.hpp"
 //#include "Player.h"
 //#include "Game.h"
 
 using namespace std;
 
+const char* FILENAMES[3] = {
+	"map_file.csv",
+	"itemlist.txt",
+	"locations.txt"
+};
+
+
 int main() {
 
 	//Game game;
 	try {
-	QueueList<string> queue(5);
+		//QueueList<string> queue(5);
 
-		queue.enqueue("bannana");
-		queue.displayQueue();
-		queue.enqueue("apple");
-		queue.displayQueue();
-		queue.enqueue("pear");
-		queue.displayQueue();
-		queue.enqueue("grapes");
-		queue.displayQueue();
-		queue.enqueue("raspberry");
-		queue.displayQueue();
-		queue.enqueue("strawberry");
-		queue.displayQueue();
-		cout << "dequeue_back = " << queue.dequeue_back() << endl;
-		//cout << "dequeue = " << queue.dequeue() << endl;
-		
-		queue.displayQueue();
+		//queue.enqueue("bannana");
+		//queue.displayQueue();
+		//queue.enqueue("apple");
+		//queue.displayQueue();
+		//queue.enqueue("pear");
+		//queue.displayQueue();
+		//queue.enqueue("grapes");
+		//queue.displayQueue();
+		//queue.enqueue("raspberry");
+		//queue.displayQueue();
+		//queue.enqueue("strawberry");
+		//queue.displayQueue();
+		//cout << "dequeue_back = " << queue.dequeue_back() << endl;
+		////cout << "dequeue = " << queue.dequeue() << endl;
+		//
+		//queue.displayQueue();
 
 		//throw "Window closed successfully";
+
+		Map gamemap(FILENAMES, 20, 20, 0, 0);
+
 	}
 	catch (const char* c) {
 		cerr << c << endl;

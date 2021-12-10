@@ -1,2 +1,56 @@
-﻿  QueueList.cpp
-  FinalProject.vcxproj -> C:\Users\rfdav\OneDrive\Documents\GitHub\DSA_FinalProject_TBA\FinalProject\Debug\FinalProject.exe
+﻿  Game.cpp
+C:\Users\rfdav\OneDrive\Documents\GitHub\DSA_FinalProject_TBA\FinalProject\Map.h(33,17): error C2143: syntax error: missing ';' before '<'
+C:\Users\rfdav\OneDrive\Documents\GitHub\DSA_FinalProject_TBA\FinalProject\Map.h(33,17): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\rfdav\OneDrive\Documents\GitHub\DSA_FinalProject_TBA\FinalProject\Map.h(33,34): error C2238: unexpected token(s) preceding ';'
+C:\Users\rfdav\OneDrive\Documents\GitHub\DSA_FinalProject_TBA\FinalProject\Map.h(34,17): error C2143: syntax error: missing ';' before '<'
+C:\Users\rfdav\OneDrive\Documents\GitHub\DSA_FinalProject_TBA\FinalProject\Map.h(34,17): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\rfdav\OneDrive\Documents\GitHub\DSA_FinalProject_TBA\FinalProject\Map.h(34,34): error C2238: unexpected token(s) preceding ';'
+C:\Users\rfdav\OneDrive\Documents\GitHub\DSA_FinalProject_TBA\FinalProject\Map.h(46,31): error C2535: 'Map::item Map::getItem(std::string)': member function already defined or declared
+C:\Users\rfdav\OneDrive\Documents\GitHub\DSA_FinalProject_TBA\FinalProject\Map.h(43): message : see declaration of 'Map::getItem'
+C:\Users\rfdav\OneDrive\Documents\GitHub\DSA_FinalProject_TBA\FinalProject\Game.cpp(3,14): error C2512: 'Map': no appropriate default constructor available
+C:\Users\rfdav\OneDrive\Documents\GitHub\DSA_FinalProject_TBA\FinalProject\Map.h(7,7): message : see declaration of 'Map'
+  LinkedListStack.cpp
+C:\Users\rfdav\OneDrive\Documents\GitHub\DSA_FinalProject_TBA\FinalProject\LinkedListStack.cpp(37,6): error C2065: 'c': undeclared identifier
+C:\Users\rfdav\OneDrive\Documents\GitHub\DSA_FinalProject_TBA\FinalProject\LinkedListStack.cpp(37,6): error C3861: 'c': identifier not found
+C:\Users\rfdav\OneDrive\Documents\GitHub\DSA_FinalProject_TBA\FinalProject\LinkedListStack.cpp(142,9): error C2760: syntax error: unexpected token '=', expected 'expression'
+C:\Users\rfdav\OneDrive\Documents\GitHub\DSA_FinalProject_TBA\FinalProject\LinkedListStack.cpp(147,9): error C2760: syntax error: unexpected token '=', expected 'expression'
+  main.cpp
+C:\Users\rfdav\OneDrive\Documents\GitHub\DSA_FinalProject_TBA\FinalProject\Map.h(30,8): error C2143: syntax error: missing ';' before '<'
+C:\Users\rfdav\OneDrive\Documents\GitHub\DSA_FinalProject_TBA\FinalProject\Map.h(30,8): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\rfdav\OneDrive\Documents\GitHub\DSA_FinalProject_TBA\FinalProject\Map.h(30,29): error C2238: unexpected token(s) preceding ';'
+C:\Users\rfdav\OneDrive\Documents\GitHub\DSA_FinalProject_TBA\FinalProject\Map.h(33,17): error C2143: syntax error: missing ';' before '<'
+C:\Users\rfdav\OneDrive\Documents\GitHub\DSA_FinalProject_TBA\FinalProject\Map.h(33,17): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\rfdav\OneDrive\Documents\GitHub\DSA_FinalProject_TBA\FinalProject\Map.h(33,34): error C2238: unexpected token(s) preceding ';'
+C:\Users\rfdav\OneDrive\Documents\GitHub\DSA_FinalProject_TBA\FinalProject\Map.h(34,17): error C2143: syntax error: missing ';' before '<'
+C:\Users\rfdav\OneDrive\Documents\GitHub\DSA_FinalProject_TBA\FinalProject\Map.h(34,17): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\rfdav\OneDrive\Documents\GitHub\DSA_FinalProject_TBA\FinalProject\Map.h(34,34): error C2238: unexpected token(s) preceding ';'
+C:\Users\rfdav\OneDrive\Documents\GitHub\DSA_FinalProject_TBA\FinalProject\Map.h(40,15): error C2061: syntax error: identifier 'vector'
+C:\Users\rfdav\OneDrive\Documents\GitHub\DSA_FinalProject_TBA\FinalProject\Map.h(46,31): error C2535: 'Map::item Map::getItem(std::string)': member function already defined or declared
+C:\Users\rfdav\OneDrive\Documents\GitHub\DSA_FinalProject_TBA\FinalProject\Map.h(43): message : see declaration of 'Map::getItem'
+C:\Users\rfdav\OneDrive\Documents\GitHub\DSA_FinalProject_TBA\FinalProject\main.cpp(41,2): error C2059: syntax error: '}'
+  Player.cpp
+C:\Users\rfdav\OneDrive\Documents\GitHub\DSA_FinalProject_TBA\FinalProject\Map.h(33,17): error C2143: syntax error: missing ';' before '<'
+C:\Users\rfdav\OneDrive\Documents\GitHub\DSA_FinalProject_TBA\FinalProject\Map.h(33,17): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\rfdav\OneDrive\Documents\GitHub\DSA_FinalProject_TBA\FinalProject\Map.h(33,34): error C2238: unexpected token(s) preceding ';'
+C:\Users\rfdav\OneDrive\Documents\GitHub\DSA_FinalProject_TBA\FinalProject\Map.h(34,17): error C2143: syntax error: missing ';' before '<'
+C:\Users\rfdav\OneDrive\Documents\GitHub\DSA_FinalProject_TBA\FinalProject\Map.h(34,17): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\rfdav\OneDrive\Documents\GitHub\DSA_FinalProject_TBA\FinalProject\Map.h(34,34): error C2238: unexpected token(s) preceding ';'
+C:\Users\rfdav\OneDrive\Documents\GitHub\DSA_FinalProject_TBA\FinalProject\Map.h(46,31): error C2535: 'Map::item Map::getItem(std::string)': member function already defined or declared
+C:\Users\rfdav\OneDrive\Documents\GitHub\DSA_FinalProject_TBA\FinalProject\Map.h(43): message : see declaration of 'Map::getItem'
+  Map.cpp
+C:\Users\rfdav\OneDrive\Documents\GitHub\DSA_FinalProject_TBA\FinalProject\Map.h(33,17): error C2143: syntax error: missing ';' before '<'
+C:\Users\rfdav\OneDrive\Documents\GitHub\DSA_FinalProject_TBA\FinalProject\Map.h(33,17): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\rfdav\OneDrive\Documents\GitHub\DSA_FinalProject_TBA\FinalProject\Map.h(33,34): error C2238: unexpected token(s) preceding ';'
+C:\Users\rfdav\OneDrive\Documents\GitHub\DSA_FinalProject_TBA\FinalProject\Map.h(34,17): error C2143: syntax error: missing ';' before '<'
+C:\Users\rfdav\OneDrive\Documents\GitHub\DSA_FinalProject_TBA\FinalProject\Map.h(34,17): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\rfdav\OneDrive\Documents\GitHub\DSA_FinalProject_TBA\FinalProject\Map.h(34,34): error C2238: unexpected token(s) preceding ';'
+C:\Users\rfdav\OneDrive\Documents\GitHub\DSA_FinalProject_TBA\FinalProject\Map.h(46,31): error C2535: 'Map::item Map::getItem(std::string)': member function already defined or declared
+C:\Users\rfdav\OneDrive\Documents\GitHub\DSA_FinalProject_TBA\FinalProject\Map.h(43): message : see declaration of 'Map::getItem'
+C:\Users\rfdav\OneDrive\Documents\GitHub\DSA_FinalProject_TBA\FinalProject\LinkedListStack.cpp(37,6): error C2065: 'c': undeclared identifier
+C:\Users\rfdav\OneDrive\Documents\GitHub\DSA_FinalProject_TBA\FinalProject\LinkedListStack.cpp(37,6): error C3861: 'c': identifier not found
+C:\Users\rfdav\OneDrive\Documents\GitHub\DSA_FinalProject_TBA\FinalProject\LinkedListStack.cpp(142,9): error C2760: syntax error: unexpected token '=', expected 'expression'
+C:\Users\rfdav\OneDrive\Documents\GitHub\DSA_FinalProject_TBA\FinalProject\LinkedListStack.cpp(147,9): error C2760: syntax error: unexpected token '=', expected 'expression'
+C:\Users\rfdav\OneDrive\Documents\GitHub\DSA_FinalProject_TBA\FinalProject\Map.cpp(95,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\rfdav\OneDrive\Documents\GitHub\DSA_FinalProject_TBA\FinalProject\Map.cpp(96,21): warning C4018: '<': signed/unsigned mismatch
+C:\Users\rfdav\OneDrive\Documents\GitHub\DSA_FinalProject_TBA\FinalProject\Map.cpp(98,2): error C2059: syntax error: '}'
+  Generating Code...

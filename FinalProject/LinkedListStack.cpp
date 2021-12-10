@@ -14,6 +14,7 @@
 //		* display list contents
 
 #include <iostream>
+#include <string>
 #include "LinkedListStack.h" 
 
 using namespace std;
@@ -163,4 +164,16 @@ void LinkedListStack<Type>::displayList() {
 		current = current->next;
 	}
 	cout << "00" << endl;
+}
+
+template<class Type>
+string LinkedListStack<Type>::to_String() {
+	string temp = "[ ";
+	for (Node* curr = head; curr != nullptr; curr = curr->next) {
+		if (curr->next == nullptr)
+			temp = temp + curr->data + ", ";
+		else 
+			temp = temp + curr->data + " ]";	
+	}
+	return temp;
 }
