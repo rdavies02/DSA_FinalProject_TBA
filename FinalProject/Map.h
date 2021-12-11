@@ -2,6 +2,11 @@
 #ifndef __MAP_H__
 #define __MAP_H__
 
+#include <vector>
+
+//#include "LinkedListStack.h"
+//#include "LinkedListStack.cpp"
+
 using namespace std;
 
 class Map {
@@ -15,6 +20,9 @@ private:
 	struct item {
 		uint8_t id;
 		string name;
+		item() {
+			id = 0; name = "";
+		}
 	};
 
 	//stores the current coordinates and info for the map location
@@ -30,8 +38,8 @@ private:
 	vector<vector<loc*>> maparr;
 	//vector<item> p_backpack;
 	//vector<item> g_backpack;
-	LinkedListStack<item> p_backpack;
-	LinkedListStack<item> g_backpack;
+	//LinkedListStack<item> p_backpack;
+	//LinkedListStack<item> g_backpack;
 
 public:
 	Map(const char* map_filename[3], int max_x, int max_y,
@@ -43,7 +51,6 @@ public:
 	item getItem(string csvtoken);
 	bool movePlayerLoc(uint8_t new_x, uint8_t new_y);
 
-	item getItem(string csvtoken);
 
 	void dispMap();
 

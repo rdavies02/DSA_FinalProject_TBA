@@ -24,17 +24,17 @@ using namespace std;
 		Node is a user defined data type defined inside the class.
 */
 
-/* 
-	~Node: Destructor definition for Node 
-*/
-template<class Type>
-inline LinkedListStack<Type>::Node::~Node() {
-	delete next;
-}
+///* 
+//	~Node: Destructor definition for Node 
+//*/
+//template<class Type>
+//inline LinkedListStack<Type>::Node::~Node() {
+//	delete next;
+//}
 
 template<typename Type>
 LinkedListStack<Type>::LinkedListStack(int cap) {
-	if (c < 1) {
+	if (cap < 1) {
 		throw "Invalid Stack size";
 	}
 
@@ -139,12 +139,12 @@ Type LinkedListStack<Type>::pop() {
 
 template<class Type>
 bool LinkedListStack<Type>::isEmpty() {
-	return = (size == 0) ? true : false;
+	return (size == 0) ? true : false;
 }
 
 template<class Type>
 bool LinkedListStack<Type>::isFull() {
-	return = (size == capacity) ? true : false;
+	return (size == capacity) ? true : false;
 }
 
 // return the nodes count

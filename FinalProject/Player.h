@@ -10,8 +10,6 @@ class Player {
 private:
 	std::string username;
 	
-	
-
 	//std::vector<Game::item> backpack;
 
 	struct stats {

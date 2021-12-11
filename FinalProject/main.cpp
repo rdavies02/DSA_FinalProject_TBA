@@ -44,7 +44,7 @@ int main() {
 		//throw "Window closed successfully";
 
 		Map gamemap(FILENAMES, 20, 20, 0, 0);
-
+		gamemap.dispMap();
 	}
 	catch (const char* c) {
 		cerr << c << endl;

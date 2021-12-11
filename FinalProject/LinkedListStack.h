@@ -11,7 +11,7 @@ private:
 	struct Node {
 		Type data;
 		Node* next;
-		~Node();
+		//~Node();
 	};
 	
 	Node* head;  // to point at the first node

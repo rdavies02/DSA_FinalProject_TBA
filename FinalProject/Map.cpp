@@ -4,10 +4,10 @@
 #include <sstream>
 #include <vector>
 #include "Map.h"
-#include "LinkedListStack.h"
-#include "LinkedListStack.cpp"
-#include "QueueList.h"
-#include "QueueList.cpp"
+//#include "LinkedListStack.h"
+//#include "LinkedListStack.cpp"
+//#include "QueueList.h"
+//#include "QueueList.cpp"
 
 using namespace std;
 
@@ -30,13 +30,14 @@ Map::Map(const char* files[3],
 		vector<loc*> rowVect;
 		
 		while (getline(strm, token, ',')) {
-			istringstream strm2(token);
+			/*istringstream strm2(token);
 			vector<uint8_t> locinfovect;
 			string t_locinfo;
 			while (getline(strm, t_locinfo, '|')) {
 				locinfovect.push_back((uint8_t)stoi(t_locinfo));
-			}
-			rowVect.push_back(initLoc(locinfovect));
+			}*/
+
+			rowVect.push_back(initLoc(token, ));
 			locinfovect.clear();
 		}
 		maparr.push_back(rowVect);
@@ -56,7 +57,7 @@ Map::~Map() {
 }
 
 Map::loc* Map::initLoc(vector<uint8_t> locinfo_v) {
-	loc* temp; // = new loc;
+	loc* temp = new loc;
 	temp->loc_num = locinfo_v[0];
 	temp->item_pres = locinfo_v[1] == 256 ? false : true;
 	temp->item.id = locinfo_v[1];
@@ -65,7 +66,7 @@ Map::loc* Map::initLoc(vector<uint8_t> locinfo_v) {
 }
 
 Map::loc* Map::initLoc(uint8_t l_num, uint8_t item) {
-	loc* temp; // = new loc;
+	loc* temp = new loc;
 	temp->loc_num = l_num;
 	temp->item_pres = item == 256 ? false : true;
 	temp->item.id = item;
@@ -89,7 +90,7 @@ Map::item Map::getItem(string csvtoken) {
 
 
 bool Map::movePlayerLoc(uint8_t new_x, uint8_t new_y) {
-
+	return true;
 }
 
 void Map::dispMap() {
