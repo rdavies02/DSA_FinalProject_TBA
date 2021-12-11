@@ -6,8 +6,8 @@
 #include "Map.h"
 //#include "LinkedListStack.h"
 //#include "LinkedListStack.cpp"
-//#include "QueueList.h"
-//#include "QueueList.cpp"
+#include "QueueList.h"
+#include "QueueList.cpp"
 
 using namespace std;
 
@@ -23,26 +23,21 @@ Map::Map(const char* files[3],
 		throw ("Unable to open: " + map_filename).c_str();
 
 	string line, token;
-	uint8_t xcurr = 0, ycurr = 0;
+	//uint8_t xcurr = 0, ycurr = 0;
 	while (getline(map_FileStream, line))
 	{
 		istringstream strm(line);
 		vector<loc*> rowVect;
 		
 		while (getline(strm, token, ',')) {
-			/*istringstream strm2(token);
-			vector<uint8_t> locinfovect;
-			string t_locinfo;
-			while (getline(strm, t_locinfo, '|')) {
-				locinfovect.push_back((uint8_t)stoi(t_locinfo));
-			}*/
-
-			rowVect.push_back(initLoc(token, ));
-			locinfovect.clear();
+			string locnum, itemid, delim = "|";
+			istringstream strm(token);
+			strm >> locnum >> delim >> itemid;
+			rowVect.push_back(initLoc((uint8_t)stoi(locnum), (uint8_t)stoi(itemid)));
 		}
 		maparr.push_back(rowVect);
 		rowVect.clear();
-		xcurr = 0, ycurr++;
+		//xcurr = 0, ycurr++;
 	}
 	map_FileStream.close();
 
@@ -60,8 +55,7 @@ Map::loc* Map::initLoc(vector<uint8_t> locinfo_v) {
 	loc* temp = new loc;
 	temp->loc_num = locinfo_v[0];
 	temp->item_pres = locinfo_v[1] == 256 ? false : true;
-	temp->item.id = locinfo_v[1];
-
+	temp->itemid = locinfo_v[1];
 	return temp;
 }
 
@@ -69,25 +63,13 @@ Map::loc* Map::initLoc(uint8_t l_num, uint8_t item) {
 	loc* temp = new loc;
 	temp->loc_num = l_num;
 	temp->item_pres = item == 256 ? false : true;
-	temp->item.id = item;
-	
+	temp->itemid = item;
 	return temp;
 }
 
 Map::loc* Map::getLoc(uint8_t x_coord, uint8_t y_coord) {
 	return maparr[y_coord][x_coord];
 }
-
-
-Map::item Map::getItem(string csvtoken) {
-	// split the token into item info, later can be expanded 
-	// to store more information at a location
-	istringstream strm(csvtoken);
-	item temp;
-	strm >> temp.id;
-	return temp;
-}
-
 
 bool Map::movePlayerLoc(uint8_t new_x, uint8_t new_y) {
 	return true;
@@ -101,4 +83,54 @@ void Map::dispMap() {
 	}
 }
 
+/**
+	Map::initGameBackpack initializes the game backpack, 
+	the items the user can aqquire in the order that they are 
+	listed in the file and enqueues these items into the game backpack
+	which is a queue of type: item
+*/
+void Map::initGameBackpack() {
+	// open necessicary files
+	ifstream item_FileStream(itemlist_filename);
+	if (item_FileStream.fail() == true)
+		throw ("Unable to open: " + itemlist_filename).c_str();
 
+	string line, token;
+	while (getline(item_FileStream, line)) {
+		istringstream strm(line);
+		
+		item tempitem;
+		string statusName, statuAmount;
+		strm >> tempitem.id >> tempitem.name >> statusName >> statuAmount;
+
+		if (statusName == "NULL") {
+			tempitem.stat_increase = false;
+			tempitem.stat = stats();
+		}
+		else if (statusName == "Strength") {
+			tempitem.stat_increase = true;
+			tempitem.stat = stats((uint8_t)stoi(statuAmount), 0, 0);
+		}
+		else if (statusName == "Dexterity") {
+			tempitem.stat_increase = true;
+			tempitem.stat = stats(0, (uint8_t)stoi(statuAmount), 0);
+		}
+		else if (statusName == "Intelligence") {
+			tempitem.stat_increase = true;
+			tempitem.stat = stats(0, 0, (uint8_t)stoi(statuAmount));
+		}
+
+		// moves the first item in the file to the front of the queue
+		// and adds later items to the back of the queue, FIFO
+		g_backpack.enqueue(tempitem);
+	}
+
+}
+
+QueueList<item> Map::getGameBackpack() {
+	return g_backpack;
+}
+
+QueueList<item> Map::getPlayerBackpack() {
+	return p_backpack;
+}

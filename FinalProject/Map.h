@@ -3,27 +3,31 @@
 #define __MAP_H__
 
 #include <vector>
+#include "Player.h"
 
-//#include "LinkedListStack.h"
-//#include "LinkedListStack.cpp"
+#include "QueueList.h"
+#include "QueueList.cpp"
 
 using namespace std;
 
+struct item {
+	uint8_t id;
+	string name;
+	bool stat_increase;
+	stats stat;
+	item() {
+		id = 0; name = ""; stat_increase = false;
+		stat = stats();
+	}
+};
+
 class Map {
 private:
-	/*float p_loc_x;
-	float p_loc_y;*/
 	string map_filename,
 		itemlist_filename,
 		locations_filename;
-
-	struct item {
-		uint8_t id;
-		string name;
-		item() {
-			id = 0; name = "";
-		}
-	};
+	
+	
 
 	//stores the current coordinates and info for the map location
 	struct loc {
@@ -31,13 +35,14 @@ private:
 		//uint8_t y_loc;
 		uint8_t loc_num;
 		bool item_pres;
-		item item;
+		uint8_t itemid;
 	};
 
-	loc* currPlayerLoc;
+	//pointer to point at the location in the vector
+	loc* currPlayerLoc; 
 	vector<vector<loc*>> maparr;
-	//vector<item> p_backpack;
-	//vector<item> g_backpack;
+	QueueList<item> p_backpack;
+	QueueList<item> g_backpack;
 	//LinkedListStack<item> p_backpack;
 	//LinkedListStack<item> g_backpack;
 
@@ -48,11 +53,13 @@ public:
 	loc* initLoc(vector<uint8_t> locinfo_v);
 	loc* initLoc(uint8_t l_num, uint8_t item);
 	loc* getLoc(uint8_t x_coord, uint8_t y_coord);
-	item getItem(string csvtoken);
 	bool movePlayerLoc(uint8_t new_x, uint8_t new_y);
-
-
 	void dispMap();
+
+	//backpack stuff
+	void initGameBackpack();
+	QueueList<item> getGameBackpack();
+	QueueList<item> getPlayerBackpack();
 
 };
 

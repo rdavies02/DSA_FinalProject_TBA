@@ -1,2 +1,29 @@
-﻿  main.cpp
-  FinalProject.vcxproj -> C:\Users\rfdav\OneDrive\Documents\GitHub\DSA_FinalProject_TBA\FinalProject\Debug\FinalProject.exe
+﻿  Game.cpp
+C:\Users\rfdav\OneDrive\Documents\GitHub\DSA_FinalProject_TBA\FinalProject\Map.h(17,8): error C3646: 'stat': unknown override specifier
+C:\Users\rfdav\OneDrive\Documents\GitHub\DSA_FinalProject_TBA\FinalProject\Map.h(17,12): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\rfdav\OneDrive\Documents\GitHub\DSA_FinalProject_TBA\FinalProject\Map.h(21,10): error C3861: 'stats': identifier not found
+C:\Users\rfdav\OneDrive\Documents\GitHub\DSA_FinalProject_TBA\FinalProject\Map.h(21,8): error C2659: '=': function as left operand
+  main.cpp
+C:\Users\rfdav\OneDrive\Documents\GitHub\DSA_FinalProject_TBA\FinalProject\Player.h(28,9): error C2065: 'item': undeclared identifier
+C:\Users\rfdav\OneDrive\Documents\GitHub\DSA_FinalProject_TBA\FinalProject\Player.h(28,2): error C2923: 'std::vector': 'item' is not a valid template type argument for parameter '_Ty'
+C:\Users\rfdav\OneDrive\Documents\GitHub\DSA_FinalProject_TBA\FinalProject\Player.h(28): message : see declaration of 'item'
+C:\Users\rfdav\OneDrive\Documents\GitHub\DSA_FinalProject_TBA\FinalProject\Player.h(28,2): error C2976: 'std::vector': too few template arguments
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector(443): message : see declaration of 'std::vector'
+  Player.cpp
+C:\Users\rfdav\OneDrive\Documents\GitHub\DSA_FinalProject_TBA\FinalProject\Map.h(17,8): error C3646: 'stat': unknown override specifier
+C:\Users\rfdav\OneDrive\Documents\GitHub\DSA_FinalProject_TBA\FinalProject\Map.h(17,12): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\rfdav\OneDrive\Documents\GitHub\DSA_FinalProject_TBA\FinalProject\Map.h(21,10): error C3861: 'stats': identifier not found
+C:\Users\rfdav\OneDrive\Documents\GitHub\DSA_FinalProject_TBA\FinalProject\Map.h(21,8): error C2659: '=': function as left operand
+  Map.cpp
+C:\Users\rfdav\OneDrive\Documents\GitHub\DSA_FinalProject_TBA\FinalProject\Player.h(28,9): error C2065: 'item': undeclared identifier
+C:\Users\rfdav\OneDrive\Documents\GitHub\DSA_FinalProject_TBA\FinalProject\Player.h(28,2): error C2923: 'std::vector': 'item' is not a valid template type argument for parameter '_Ty'
+C:\Users\rfdav\OneDrive\Documents\GitHub\DSA_FinalProject_TBA\FinalProject\Player.h(28): message : see declaration of 'item'
+C:\Users\rfdav\OneDrive\Documents\GitHub\DSA_FinalProject_TBA\FinalProject\Player.h(28,2): error C2976: 'std::vector': too few template arguments
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector(443): message : see declaration of 'std::vector'
+C:\Users\rfdav\OneDrive\Documents\GitHub\DSA_FinalProject_TBA\FinalProject\Map.cpp(40,37): error C2059: syntax error: ')'
+C:\Users\rfdav\OneDrive\Documents\GitHub\DSA_FinalProject_TBA\FinalProject\Map.cpp(41,4): error C2065: 'locinfovect': undeclared identifier
+C:\Users\rfdav\OneDrive\Documents\GitHub\DSA_FinalProject_TBA\FinalProject\Map.cpp(82,6): error C2039: 'item': is not a member of 'Map'
+C:\Users\rfdav\OneDrive\Documents\GitHub\DSA_FinalProject_TBA\FinalProject\Map.h(25): message : see declaration of 'Map'
+C:\Users\rfdav\OneDrive\Documents\GitHub\DSA_FinalProject_TBA\FinalProject\Map.cpp(105,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\rfdav\OneDrive\Documents\GitHub\DSA_FinalProject_TBA\FinalProject\Map.cpp(106,21): warning C4018: '<': signed/unsigned mismatch
+  Generating Code...
