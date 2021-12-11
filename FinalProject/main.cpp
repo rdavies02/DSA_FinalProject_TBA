@@ -1,8 +1,19 @@
+/*
+	Data Structures & Algorithms Final Project
+	Author: Rhys Davies
+	Github Repo: https://github.com/rdavies02/DSA_FinalProject_TBA
+
+	Text Based Adventure Game
+	class structure:
+		main -> Game 
+			 -> Player 
+			 -> Map
+*/
+
+
 #include <iostream>
 #include <string>
 
-#include "QueueList.h"
-#include "Queuelist.cpp"
 #include "Map.h"
 
 //#include "QueueList.hpp"
@@ -16,7 +27,6 @@ const char* FILENAMES[3] = {
 	"itemlist.txt",
 	"locations.txt"
 };
-
 
 int main() {
 
@@ -50,8 +60,3 @@ int main() {
 	
 	return 0;
 }
-
-
-// References : https://youtu.be/45MIykWJ-C4
-// https://www.glfw.org/docs/3.3/input_guide.html#input_key
-// https://bestofcpp.com/repo/ocornut-imgui-cpp-ui-lib

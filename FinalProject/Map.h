@@ -10,18 +10,20 @@
 
 using namespace std;
 
-struct item {
-	uint8_t id;
-	string name;
-	bool stat_increase;
-	stats stat;
-	item() {
-		id = 0; name = ""; stat_increase = false;
-		stat = stats();
-	}
-};
+
 
 class Map {
+public:
+	typedef struct item {
+		uint8_t id;
+		string name;
+		bool stat_increase;
+		Player::stats stat;
+		item() {
+			id = (uint8_t)0; name = ""; stat_increase = false;
+			stat = Player::stats();
+		}
+	};
 private:
 	string map_filename,
 		itemlist_filename,

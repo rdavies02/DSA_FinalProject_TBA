@@ -6,8 +6,8 @@
 #include "Map.h"
 //#include "LinkedListStack.h"
 //#include "LinkedListStack.cpp"
-#include "QueueList.h"
-#include "QueueList.cpp"
+//#include "QueueList.h"
+//#include "QueueList.cpp"
 
 using namespace std;
 
@@ -23,7 +23,6 @@ Map::Map(const char* files[3],
 		throw ("Unable to open: " + map_filename).c_str();
 
 	string line, token;
-	//uint8_t xcurr = 0, ycurr = 0;
 	while (getline(map_FileStream, line))
 	{
 		istringstream strm(line);
@@ -37,14 +36,11 @@ Map::Map(const char* files[3],
 		}
 		maparr.push_back(rowVect);
 		rowVect.clear();
-		//xcurr = 0, ycurr++;
 	}
 	map_FileStream.close();
 
 	// initialize starting location
 	currPlayerLoc = getLoc(start_x, start_y);
-
-	// intialize game backpack
 }
 
 Map::~Map() {
@@ -105,19 +101,19 @@ void Map::initGameBackpack() {
 
 		if (statusName == "NULL") {
 			tempitem.stat_increase = false;
-			tempitem.stat = stats();
+			tempitem.stat = Player::stats();
 		}
 		else if (statusName == "Strength") {
 			tempitem.stat_increase = true;
-			tempitem.stat = stats((uint8_t)stoi(statuAmount), 0, 0);
+			tempitem.stat = Player::stats((uint8_t)stoi(statuAmount), 0, 0);
 		}
 		else if (statusName == "Dexterity") {
 			tempitem.stat_increase = true;
-			tempitem.stat = stats(0, (uint8_t)stoi(statuAmount), 0);
+			tempitem.stat = Player::stats(0, (uint8_t)stoi(statuAmount), 0);
 		}
 		else if (statusName == "Intelligence") {
 			tempitem.stat_increase = true;
-			tempitem.stat = stats(0, 0, (uint8_t)stoi(statuAmount));
+			tempitem.stat = Player::stats(0, 0, (uint8_t)stoi(statuAmount));
 		}
 
 		// moves the first item in the file to the front of the queue
@@ -127,10 +123,10 @@ void Map::initGameBackpack() {
 
 }
 
-QueueList<item> Map::getGameBackpack() {
+QueueList<Map::item> Map::getGameBackpack() {
 	return g_backpack;
 }
 
-QueueList<item> Map::getPlayerBackpack() {
+QueueList<Map::item> Map::getPlayerBackpack() {
 	return p_backpack;
 }
