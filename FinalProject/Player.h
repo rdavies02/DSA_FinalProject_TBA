@@ -4,26 +4,15 @@
 #include <vector>
 #include <string>
 
+#include "LocStatsItem.h"
 #include "Map.h"
 
 using namespace std;
 
 class Player {
-public:
-	typedef struct stats {
-		uint8_t strength,
-			dexterity,
-			intelligence;
-		stats() {
-			strength = 0, dexterity = 0, intelligence = 0;
-		}
-		stats(uint8_t str, uint8_t dex, uint8_t intel) {
-			strength = str, dexterity = dex, intelligence = intel;
-		}
-	};
 private:
 	string username;
-	vector<Map::item> backpack;
+	vector<item> backpack;
 	stats playerStats;
 
 public:

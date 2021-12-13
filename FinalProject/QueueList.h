@@ -28,6 +28,7 @@ private:
 	Node* tail;
 
 public:
+	QueueList();
 	// constructor to initialize the queue and set the capacity
 	QueueList(int c);
 	// destructor to free all allocated memory

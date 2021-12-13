@@ -149,6 +149,7 @@
   <ItemGroup>
     <ClInclude Include="Game.h" />
     <ClInclude Include="LinkedListStack.h" />
+    <ClInclude Include="LocStatsItem.h" />
     <ClInclude Include="Map.h" />
     <ClInclude Include="Player.h" />
     <ClInclude Include="QueueList.h" />

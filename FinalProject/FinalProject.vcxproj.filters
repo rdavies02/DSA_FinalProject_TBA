@@ -50,6 +50,9 @@
     <ClInclude Include="LinkedListStack.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="LocStatsItem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Text Include="itemlist.txt">

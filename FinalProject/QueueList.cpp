@@ -3,6 +3,19 @@
 using namespace std;
 
 /**
+* QueueList Default Constructor for the QueueList class.
+* creates an object that stores the current list
+* and accessor functions for a given queue
+*/
+template<typename Type>
+QueueList<Type>::QueueList() {
+	currentSize = 0;
+
+	head = nullptr;
+	tail = nullptr;
+}
+
+/**
 * QueueList Constructor for the QueueList class.
 * creates an object that stores the current list
 * and accessor functions for a given queue
@@ -11,8 +24,7 @@ using namespace std;
 template<typename Type>
 QueueList<Type>::QueueList(int c) {
 	if (c < 1) {
-		exit(-1);
-		//throw: "Invalid Queue size";
+		throw "Invalid Queue size";
 	}
 
 	capacity = c;

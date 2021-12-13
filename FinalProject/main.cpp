@@ -51,7 +51,7 @@ int main() {
 		//
 		//queue.displayQueue();
 
-		Map gamemap(FILENAMES, 20, 20, 0, 0);
+		Map gamemap(FILENAMES, 16, (uint8_t)0, (uint8_t)0);
 		gamemap.dispMap();
 	}
 	catch (const char* c) {
